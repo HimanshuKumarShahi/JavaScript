@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 110vh;
+  background-color: #7eebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pannel {
+  height: 90%;
+  width: 90%;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 20px;
+}
+#top {
+  width: 100%;
+  height: 100px;
+  padding: 0 10%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.elem {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elem h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5px;
+}
+.box {
+  padding: 10px 10px;
+  background-color: white;
+  color: black;
+  font-weight: 800;
+}
+#bottom {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  overflow: auto;
+}
+.ball {
+  height: 60px;
+  width: 60px;
+  background-color: #4d4dbbea;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.ball:hover {
+  cursor: pointer;
+  background-color: #2727dfea;
+}
+header h1{
+  background-color: black;
+  color: aquamarine;
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+}
