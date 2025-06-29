@@ -28,11 +28,12 @@ header{
     background-color: #f0777796;
     box-shadow: 10px 10px 20px black ;
     border-radius: 1.5rem
-   
+    
 }
 .choice:hover{
     cursor: pointer;
-    border: 2px solid rgba(0, 0, 0, 0.7)   
+    border: 1.5px solid rgba(0, 0, 0, 0.7)   
+    
 }
 .score-board{
     height: 6rem;

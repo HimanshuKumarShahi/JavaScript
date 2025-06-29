@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(45deg, #0a0a0a, #3a4452, #1d1010);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        border: 1px solid #221e1e;
+        padding: 20px;
+        width: 375px;
+        border-radius: 20px;
+        background: linear-gradient(30deg, #1b1919, #3a4452);
+        box-shadow: 0px 3px 15px rgb(17, 17, 17);
+    }
+
+    .display {
+        width: 100%;
+        height: 90px;
+        border: none;
+        padding: 20px;
+        margin: 10px auto;
+        background: transparent;
+        box-shadow: 0px 3px 15px rgb(92, 88, 88);
+        font-size: 30px;
+        color: #ffffff;
+        text-align: end;
+        cursor: pointer;
+        border-radius: 10px;
+       font-weight: 700;
+       font-family: cursive;
+    }
+
+
+    button {
+        position: relative;
+        padding: 10px;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 20px;
+        background: transparent;
+        color: #ffffff;
+        font-size: 20px;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: -5px -3px 15px rgb(27, 23, 23);
+    }
+
+    .equalbtn {
+        background-color: rgb(167, 119, 29);
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div id="inputbox" class="display">0</div>
+
+        <div>
+            <button>AC</button>
+            <button>DEL</button>
+            <button>%</button>
+            <button>/</button>
+        </div>
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+        </div>
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equalbtn">= </button>
+        </div>
+    </div>
+    <script>
+
+        let input = document.querySelector('#inputbox');
+        let buttons = document.querySelectorAll('button');
+        let string = "";
+        let arr = Array.from(buttons);
+
+        arr.forEach(button => {
+            button.addEventListener("click", (e) => {
+                let btnValue = e.target.innerText;
+
+                if (btnValue === "=") {
+                    try {
+                        string = eval(string).toString(); 
+                    } catch {
+                        string = "Error"; 
+                    }
+                    input.innerText = string;
+                }
+                else if (btnValue === "AC") {
+                    string = "";
+                    input.innerText = "0";
+                }
+                else if (btnValue === "DEL") {
+                    string = string.slice(0, -1) || "0"; 
+                    input.innerText = string;
+                }
+                else {
+                   
+                    if (["+", "-", "*", "/", "%"].includes(btnValue)) {
+                        if (string === "" || ["+", "-", "*", "/", "%"].includes(string.slice(-1))) {
+                            return;
+                        }
+                    }
+                   
+                    if (btnValue === "." && string.split(/[\+\-\*\/%]/).pop().includes(".")) {
+                        return;
+                    }
+
+        
+                    if (string === "0" && btnValue !== ".") {
+                        string = btnValue;
+                    } else {
+                        string += btnValue;
+                    }
+                    input.innerText = string;
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

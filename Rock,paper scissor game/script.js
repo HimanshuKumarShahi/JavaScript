@@ -6,7 +6,7 @@ const computercorep=document.querySelector("#comp-score");
 const msg=document.querySelector("#msg");
 const gencompchoice=()=>{
     const options=["Rock","Paper","Scissors"];
-     const randomIdx=Math.floor(Math.random() * 3);
+     const randomIdx=Math.floor(Math.random() * 4);
      return options[randomIdx];
 }
 
