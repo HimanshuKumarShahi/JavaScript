@@ -11,7 +11,7 @@ const gencompchoice=()=>{
 }
 
 const drawgame=()=>{
-    msg.innerText="Game is over.Play Again";
+    msg.innerText="'Game is over'.Play Again";
     msg.style.backgroundColor="#dbdf06ec";
 }
 const showWinner=(userwin,Userchoice,comchoice)=>{
