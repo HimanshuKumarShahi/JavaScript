@@ -61,3 +61,60 @@
 
 // const newword =Word.slice(0, 14);
 // console.log(newword);
+
+// ++++++++++++++++++++++++++++
+//             Number
+// let score = 456;
+// console.log(score);
+// let amount=new Number(9843.765);
+// console.log(amount);
+// console.log(amount.toString().length);
+// console.log(amount.toFixed(2));
+// console.log(amount.toPrecision(5));
+
+// const price=10000000;
+// console.log(price.toLocaleString("en-IN"));
+
+
+// +++++++++++++++++++++++++++++++++++
+//           Math
+// console.log(Math);
+// console.log(Math.PI);
+// console.log(Math.round(95.89));
+// console.log(Math.abs(-45));
+
+// console.log((Math.random()*10 )+1 );
+// console.log(((Math.random() * 100) + 1).toFixed(0));
+
+// console.log(Math.floor(Math.random()*10 ) +1 );
+
+// const min=10;
+// const max=30;
+// console.log(Math.floor(Math.random() *( max-min +1) + min));
+
+
+//        Date 
+
+let mydate=new Date();
+// console.log(mydate.toString());
+// console.log(mydate.toISOString());
+// console.log(mydate.toJSON());
+// console.log(mydate.toDateString());
+// console.log(mydate.toTimeString());
+// console.log(mydate.toLocaleString());
+
+// const newdate= new Date("2023-04-23");
+// const newdate= new Date("05-23-2023");
+// const newdate= new Date(2023,4,23);
+// console.log(newdate.toDateString());
+// console.log(newdate.toDateString());
+
+// const mytime= new Date();
+// console.log(mytime.getTime());
+// console.log(Math.floor(mytime.getTime()/1000));
+
+console.log(mydate.toLocaleString('default',{
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+}));
