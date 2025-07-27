@@ -1,4 +1,4 @@
-console.log("Himanshu");
+// console.log("Himanshu");
 // // variables
 // const accountId=234678;
 // var accountName="ace123";
@@ -45,3 +45,19 @@ console.log("Himanshu");
 // console.log("2" == 2);
 // console.log("2" === 2);
 
+// call by value stack memory = Number, String, Boolean, undefined, null, Symbol
+// call by reference heap memory = Object, Array, Function
+
+// let Name="Himanshu";
+// let repo=45;
+// console.log(`${Name} has ${repo}.`);
+
+// let Word = new String("himanshu shahi");
+// console.log(Word.toLowerCase());
+// console.log(Word.toUpperCase());
+// console.log(Word.length);
+// console.log(Word.charAt(2));
+// console.log(Word.indexOf("s"));
+
+// const newword =Word.slice(0, 14);
+// console.log(newword);
