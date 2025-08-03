@@ -113,8 +113,8 @@ let mydate=new Date();
 // console.log(mytime.getTime());
 // console.log(Math.floor(mytime.getTime()/1000));
 
-console.log(mydate.toLocaleString('default',{
-    weekday:"long",
-    day:"numeric",
-    month:"long",
-}));
+// console.log(mydate.toLocaleString('default',{
+//     weekday:"long",
+//     day:"numeric",
+//     month:"long",
+// }));
