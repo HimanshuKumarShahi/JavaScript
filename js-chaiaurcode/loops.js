@@ -473,3 +473,88 @@
 
 // console.log(`the number is divisivle by 5 : ${num}`);
 // console.log(num);
+
+
+// let number=[2,3,4]
+
+// let num=number.reduce(function(acc,cval){
+    //     console.log(`the acc: ${acc}_,_ the cval: ${cval}`);
+    //     return acc + cval;
+    // },2)
+    // console.log(num);
+    
+//     let number=[2,3,4]
+// let num=number.reduce((acc,curr)=>(acc+curr),2);
+// console.log(num);
+
+// const cart = [
+//   { item: "Laptop", price: 60000 },
+//   { item: "Headphones", price: 2000 },
+//   { item: "Mouse", price: 800 }
+// ];
+
+// let total=cart.reduce((acc,curr)=>(acc + curr.price),0);
+// console.log(`total bill is: ${total}`);
+
+
+const books = [
+  { id: 1, title: "Eloquent JavaScript", author: "Marijn Haverbeke", subject: "Programming", pages: 450, price: 500, rating: 4.5 },
+  { id: 2, title: "You Don’t Know JS", author: "Kyle Simpson", subject: "JavaScript", pages: 350, price: 400, rating: 4.6 },
+  { id: 3, title: "Clean Code", author: "Robert C. Martin", subject: "Software Engineering", pages: 464, price: 600, rating: 4.8 },
+  { id: 4, title: "Introduction to Algorithms", author: "Thomas H. Cormen", subject: "Algorithms", pages: 1312, price: 1200, rating: 4.7 },
+  { id: 5, title: "Python Crash Course", author: "Eric Matthes", subject: "Programming", pages: 544, price: 550, rating: 4.4 },
+  { id: 6, title: "Database System Concepts", author: "Henry F. Korth", subject: "Database", pages: 1376, price: 900, rating: 4.5 },
+  { id: 7, title: "Artificial Intelligence: A Modern Approach", author: "Russell & Norvig", subject: "AI", pages: 1132, price: 1100, rating: 4.6 },
+  { id: 8, title: "The Pragmatic Programmer", author: "Andrew Hunt", subject: "Software Engineering", pages: 352, price: 650, rating: 4.7 },
+  { id: 9, title: "Operating System Concepts", author: "Silberschatz", subject: "Computer Science", pages: 976, price: 1000, rating: 4.4 },
+  { id: 10, title: "JavaScript: The Good Parts", author: "Douglas Crockford", subject: "JavaScript", pages: 176, price: 300, rating: 4.3 },
+  { id: 11, title: "Deep Learning", author: "Ian Goodfellow", subject: "AI", pages: 775, price: 1500, rating: 4.6 },
+  { id: 12, title: "Head First Design Patterns", author: "Eric Freeman", subject: "Software Engineering", pages: 694, price: 800, rating: 4.5 }
+];
+
+
+// let total= books.reduce((prev,curr)=>{
+//     console.log(`${curr.title} - ${curr.price}`);
+//     return curr.price + prev;
+    
+// },0) 
+                     
+// console.log(`The Total bill is: ${total}`);
+
+
+const products = [
+  { id: 1, name: "iPhone 14", category: "Mobile", price: 70000, quantity: 2, rating: 4.6 },
+  { id: 2, name: "Samsung Galaxy S23", category: "Mobile", price: 65000, quantity: 1, rating: 4.5 },
+  { id: 3, name: "OnePlus Nord CE 3", category: "Mobile", price: 25000, quantity: 3, rating: 4.3 },
+  { id: 4, name: "Sony WH-1000XM5", category: "Headphones", price: 30000, quantity: 1, rating: 4.7 },
+  { id: 5, name: "boAt Airdopes 141", category: "Headphones", price: 1500, quantity: 5, rating: 4.2 },
+  { id: 6, name: "HP Pavilion Laptop", category: "Laptop", price: 60000, quantity: 1, rating: 4.4 },
+  { id: 7, name: "ASUS ROG Strix", category: "Laptop", price: 120000, quantity: 2, rating: 4.6 },
+  { id: 8, name: "Dell Inspiron 15", category: "Laptop", price: 55000, quantity: 1, rating: 4.3 },
+  { id: 9, name: "LG 55-inch 4K TV", category: "TV", price: 62000, quantity: 2, rating: 4.5 },
+  { id: 10, name: "Samsung 43-inch Smart TV", category: "TV", price: 35000, quantity: 1, rating: 4.4 },
+  { id: 11, name: "Nike Air Zoom", category: "Shoes", price: 5000, quantity: 2, rating: 4.3 },
+  { id: 12, name: "Adidas Ultraboost", category: "Shoes", price: 7000, quantity: 1, rating: 4.5 },
+  { id: 13, name: "Puma Running Shoes", category: "Shoes", price: 4000, quantity: 3, rating: 4.2 },
+  { id: 14, name: "Canon EOS 1500D", category: "Camera", price: 40000, quantity: 1, rating: 4.4 },
+  { id: 15, name: "Sony Alpha A6400", category: "Camera", price: 85000, quantity: 1, rating: 4.6 },
+  { id: 16, name: "Logitech MX Master 3", category: "Accessories", price: 8000, quantity: 2, rating: 4.7 },
+  { id: 17, name: "Apple Magic Keyboard", category: "Accessories", price: 10000, quantity: 1, rating: 4.5 },
+  { id: 18, name: "JBL Flip 6", category: "Speakers", price: 12000, quantity: 2, rating: 4.4 },
+  { id: 19, name: "Amazon Echo Dot", category: "Speakers", price: 5000, quantity: 2, rating: 4.3 },
+  { id: 20, name: "Philips Air Fryer", category: "Appliances", price: 9000, quantity: 1, rating: 4.2 },
+  { id: 21, name: "Dyson V11 Vacuum", category: "Appliances", price: 45000, quantity: 1, rating: 4.6 },
+  { id: 22, name: "Mi Smart Band 7", category: "Wearables", price: 3000, quantity: 4, rating: 4.4 },
+  { id: 23, name: "Apple Watch SE", category: "Wearables", price: 28000, quantity: 1, rating: 4.5 },
+  { id: 24, name: "Samsung Galaxy Watch 5", category: "Wearables", price: 27000, quantity: 1, rating: 4.4 },
+  { id: 25, name: "GoPro Hero 11", category: "Camera", price: 50000, quantity: 1, rating: 4.7 }
+];
+
+
+let total= products.reduce((prv,cur)=>{
+    console.log(`${cur.name} _and_ ${cur.category}:-_ ${cur.price}`);
+    return prv + cur.price;  
+},0)
+console.log("===========================");
+
+console.log(`The gramd Total : ${total}`);
