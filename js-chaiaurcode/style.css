@@ -1,0 +1,45 @@
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .canvas {
+        height: 700px;
+        width: 100%;
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .button {
+        height: 90px;
+        width: 180px;
+        border: 2px solid black;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #grey {
+        background-color: grey;
+    }
+
+    #white {
+        background-color: white;
+    }
+
+    #orange {
+        background-color: orange;
+    }
+
+    #yellow {
+        background-color: yellow;
+    }
+    #green{
+        background-color: green;
+    }
+    #cyan {
+        background-color: cyan;
+    }
