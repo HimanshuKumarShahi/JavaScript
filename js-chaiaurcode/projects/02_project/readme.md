@@ -135,7 +135,20 @@ style.css
         }
         else {
             const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-            result.innerHTML = `The BMI is: ${bmi}`;
+             let choice='';
+            if(bmi<18.9){
+                choice="under Weight";
+            }
+            else if(bmi>=19 && bmi<=24.9){
+                choice="normal weight";
+            }
+            else if(bmi>24.9){
+                choice="over Weight";
+            }
+            else {
+                choice="obse";
+            }
+            result.innerHTML = `<span>${bmi} "${choice}"</span>`;
             
         }
     })
