@@ -1,88 +1,122 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-#main {
-  width: 100%;
-  height: 110vh;
-  background-color: #7eebeb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#pannel {
-  height: 90%;
-  width: 90%;
-  overflow: hidden;
-  background-color: white;
-  border-radius: 20px;
-}
-#top {
-  width: 100%;
-  height: 100px;
-  padding: 0 10%;
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.elem {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.elem h2 {
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 5px;
-}
-.box {
-  padding: 10px 10px;
-  background-color: white;
-  color: black;
-  font-weight: 800;
-}
-#bottom {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
-  overflow: auto;
-}
-.ball {
-  height: 60px;
-  width: 60px;
-  background-color: #4d4dbbea;
-  color: black;
-  font-weight: 600;
-  font-size: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
-.ball:hover {
-  cursor: pointer;
-  background-color: #2727dfea;
-}
-header h1{
-  background-color: black;
-  color: aquamarine;
-  text-align: center;
-  height: 5rem;
-  line-height: 5rem;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #ff8800, #000);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+    }
+    header {
+      width: 100%;
+      text-align: center;
+      background: black;
+      padding: 1rem;
+    }
+    header h1 {
+      color: orange;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    #main {
+      width: 95%;
+      max-width: 1000px;
+      flex: 1;
+      margin: 1rem auto;
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    #top {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+      background: black;
+      color: white;
+    }
+    .elem {
+      text-align: center;
+    }
+    .elem h2 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .box {
+      margin-top: 5px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    #bottom {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      justify-items: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+    .ball {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffa500, #ff4500);
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .ball:hover {
+      transform: scale(1.1);
+      background: linear-gradient(145deg, #ff4500, #ffa500);
+    }
+    #game-over {
+      text-align: center;
+      padding: 2rem;
+      color: black;
+    }
+    #restart {
+      background: orange;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #restart:hover {
+      background: black;
+      color: orange;
+    }
+    @media (max-width: 600px) {
+      .ball {
+        height: 45px;
+        width: 45px;
+        font-size: 16px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
