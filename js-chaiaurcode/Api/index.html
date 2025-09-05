@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api</title>
+    <title>API 01</title>
 </head>
 <body>
+<body style="background-color: #212121">
+
+
     
     <script>
         const requesturl='https://api.github.com/users/Himanshukumarshahi'
@@ -16,15 +19,11 @@
               if(xhr.readyState=== 4){
                 let data=JSON.parse(this.responseText);
                 console.log(typeof data);
-                console.log(data.id);
-                console.log(data.followers);
-                console.log(data.name);
-                console.log(data.avatar_url);
+
               }
           }
           xhr.send();
           
-
     </script>
 </body>
 </html>
