@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api</title>
+</head>
+<style>
+  #card {
+    height: 800px;
+    width: 600px;
+    background-color: aqua;
+    cursor: pointer;
+  }
+</style>
+
+<body style="background-color: #212121">
+
+  <div id="card"></div>
+
+  <script>
+    const requesturl = 'https://api.github.com/users/Himanshukumarshahi'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl);
+    xhr.onreadystatechange = function () {
+      //   console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        let data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        //  const createdDate = new Date(data.created_at).toDateString();
+        //  console.log(createdDate);
+
+        let card = document.querySelector('#card');
+        card.addEventListener('click', () => {
+          card.innerHTML = `
+          <img src='${data.avatar_url}' alt="Profile Picture">
+          <h2>${data.name}</h2>
+          <p>Username: ${data.login}</p>
+          <p>Followers: ${data.followers}</p>
+          <p>Following: ${data.following}</p>
+        `;
+        });
+
+      }
+    }
+    xhr.send();
+  </script>
+</body>
+
+</html>
