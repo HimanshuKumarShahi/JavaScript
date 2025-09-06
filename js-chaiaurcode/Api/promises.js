@@ -116,7 +116,7 @@
 //     }
 //     catch(error){
 //         console.log("error...",error);
-        
+
 //     }
 // }
 // newpromisefive();
@@ -126,21 +126,25 @@
 //     try {
 //         const data=await responce.json()
 //         console.log(data);
-        
+
 //     } 
 //     catch (error) {
 //        console.log("e",error);
-        
+
 //     }
 // }
 // getuserdata()
 
 // fetch('https://api.github.com/users/Himanshukumarshahi')
-// .then((responce)=>{
-//     return responce.json();
-// }).then((data)=>{
-//     console.log(data);
-    
-// })
-// .catch(()=>{console.log("error...");
-// })
+//     .then((responce) => {
+//         return responce.json();
+//     })
+//     .then((data) => {
+//         console.log(data);
+
+//     })
+
+//     .catch(() => {
+//         console.log("error...");
+//     })
+
