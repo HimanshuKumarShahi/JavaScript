@@ -11,3 +11,5 @@ fetch('https://api.github.com/users/Himanshukumarshahi')
     .catch(() => {
         console.log("error...");
     });
+
+    // the working of fetch is priority task that work first then setTimeout or others.
