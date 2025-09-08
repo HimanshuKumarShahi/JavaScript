@@ -59,4 +59,10 @@
     }
     newuser.totallength();
 
-    "I LOVE JAVASCRIPT..".totallength();
+    // "I LOVE JAVASCRIPT..".totallength();
+
+    // let name="INDIA";
+    // console.log(name.trim().length);
+
+    "hellodear".totallength();
+    "learn javaScript ".totallength();
