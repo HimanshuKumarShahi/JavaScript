@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure in js</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+
+    // function outer() {
+    //     let username = "raja"
+        // console.log(score);
+        
+    //     function inner() {
+    //         let score = 100;
+    //         console.log(score);
+    //         console.log(username);
+    //     }
+    //     inner();
+    // }
+    // outer();
+    // console.log("outer", username);
+
+// function user(){
+//     let name="raj"
+//     function inner() {
+//         console.log(name);
+//     }
+//     return inner();
+// }
+// const newuser=user()
+// console.log(newuser);
+
+
+</script>
+
+<script>
+    // document.getElementById('orange').onclick =()=>{
+    //     document.body.style.backgroundColor='orange'
+    // }
+    // document.querySelector('#green').onclick =()=>{
+    //     document.body.style.backgroundColor='green'
+    // }
+
+    // IF THERE IS 100 buttons then use lexicals or closure
+
+    function changecolor(color){
+    // document.body.style.backgroundColor=`${color}`
+    return function inner(){
+        document.body.style.backgroundColor=`${color}`
+
+    }
+
+    }
+     document.getElementById('orange').onclick=changecolor('orange')
+     document.getElementById('green').onclick=changecolor('green')
+
+</script>
+</html>
