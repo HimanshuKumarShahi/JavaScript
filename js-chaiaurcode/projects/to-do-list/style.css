@@ -1,0 +1,156 @@
+/* Reset & base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px; /* allow shrinking on small screens */
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+  overflow: hidden;
+}
+
+/* Input + button container */
+.top-bar {
+  display: flex;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  background: #1e1e1e;
+  padding-bottom: 10px;
+  z-index: 10;
+}
+
+/* Input styling */
+.top-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ff5722;
+  border-radius: 8px;
+  background: #121212;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.top-bar input:focus {
+  border-color: #ff784e;
+  box-shadow: 0 0 8px #ff5722;
+}
+
+/* Button styling */
+.top-bar button {
+  padding: 12px 25px;
+  background: #ff5722;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.top-bar button:hover {
+  background: #ff784e;
+  box-shadow: 0 0 10px #ff5722;
+}
+
+/* Scrollable list */
+.to-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 5px;
+}
+
+/* Scrollbar customization */
+.to-list::-webkit-scrollbar {
+  width: 6px;
+}
+.to-list::-webkit-scrollbar-thumb {
+  background: #ff5722;
+  border-radius: 10px;
+}
+.to-list::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+/* List items */
+.to-list li {
+  list-style: none;
+  background: #2a2a2a;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s ease;
+  word-wrap: break-word;
+}
+
+.to-list li:hover {
+  background: #333;
+}
+
+.to-list li::before {
+  content: "✔";
+  position: absolute;
+  left: -25px;
+  color: #ff5722;
+  font-size: 16px;
+}
+
+/* ===========================
+   Responsive Breakpoints
+=========================== */
+
+/* Tablets and smaller */
+@media (max-width: 600px) {
+  .container {
+    height: 85vh;
+    padding: 15px;
+  }
+
+  .top-bar button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .top-bar input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .top-bar button {
+    width: 100%;
+  }
+}
