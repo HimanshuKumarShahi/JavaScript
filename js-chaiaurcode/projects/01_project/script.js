@@ -1,9 +1,8 @@
  const button=document.querySelectorAll(".button");
         const body=document.querySelector("body");
         
-        button.forEach((button)=>{
-            button.addEventListener("click",(e)=>{
-                // console.log(e.target.id);
+        button.forEach((btn)=>{
+            btn.addEventListener("click",(e)=>{
                 if(e.target.id === "grey")
             {
                 body.style.backgroundColor='grey';
@@ -24,6 +23,5 @@
                 body.style.backgroundColor='cyan';
             }
             
-            })
-            
+            })  
         })
