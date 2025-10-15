@@ -1,9 +1,9 @@
 const input_field = document.getElementById("Password");
 const btn = document.getElementById("button");
-let pass_len = 6;
+let pass_len = 8;
 
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowercase = "abcdefghijklmnopqrstuvwxyz";  // Fixed typo here
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const digits = "0123456789";
 const symbols = "@&|_-$~";
 
@@ -27,3 +27,19 @@ function createPassword() {
 
     input_field.value = password;
 }
+
+const copyBtn = document.getElementById("copyBtn");
+copyBtn.addEventListener('click', copypassword);
+
+function copypassword() {
+    if (input_field.value.length > 0) {
+        navigator.clipboard.writeText(input_field.value)
+            .then(() => {
+                alert("Password copied to clipboard!");
+            })
+            .catch(err => {
+                alert("Failed to copy password.");
+            });
+    }
+}
+
