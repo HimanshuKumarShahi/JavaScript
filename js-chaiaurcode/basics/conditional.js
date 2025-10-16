@@ -1,5 +1,4 @@
 const num=2;
-
 // if(num==2)
 // {
 //     console.log("exexuted...");
@@ -8,8 +7,6 @@ const num=2;
 // {
 //     log("not exexuted...");
 // }
-
-
 // if(2 === 2) //also check data typesame or not
 // {
 //     console.log("exexuted...");
@@ -18,18 +15,12 @@ const num=2;
 // {
 //    console.log("not exexuted...");
 // }
-
-
-
-
 // const temp=9;
 // if(temp >=40){
-//     console.log("too hot...");
-    
+//      console.log("too hot...");   
 // }
 // else if(temp >=25){
 //     console.log("moderate ...");
-    
 // }
 // else {
 //     console.log("good to live ...");
