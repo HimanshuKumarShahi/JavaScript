@@ -95,26 +95,26 @@
 
 //        Date 
 
-let mydate=new Date();
-// console.log(mydate.toString());
-// console.log(mydate.toISOString());
-// console.log(mydate.toJSON());
-// console.log(mydate.toDateString());
-// console.log(mydate.toTimeString());
-// console.log(mydate.toLocaleString());
+// let mydate=new Date();
+// // console.log(mydate.toString());
+// // console.log(mydate.toISOString());
+// // console.log(mydate.toJSON());
+// // console.log(mydate.toDateString());
+// // console.log(mydate.toTimeString());
+// // console.log(mydate.toLocaleString());
 
-// const newdate= new Date("2023-04-23");
-// const newdate= new Date("05-23-2023");
-// const newdate= new Date(2023,4,23);
-// console.log(newdate.toDateString());
-// console.log(newdate.toDateString());
+// // const newdate= new Date("2023-04-23");
+// // const newdate= new Date("05-23-2023");
+// // const newdate= new Date(2023,4,23);
+// // console.log(newdate.toDateString());
+// // console.log(newdate.toDateString());
 
-// const mytime= new Date();
-// console.log(mytime.getTime());
-// console.log(Math.floor(mytime.getTime()/1000));
+// // const mytime= new Date();
+// // console.log(mytime.getTime());
+// // console.log(Math.floor(mytime.getTime()/1000));
 
-// console.log(mydate.toLocaleString('default',{
-//     weekday:"long",
-//     day:"numeric",
-//     month:"long",
-// }));
+// // console.log(mydate.toLocaleString('default',{
+// //     weekday:"long",
+// //     day:"numeric",
+// //     month:"long",
+// // }));
